@@ -4,14 +4,19 @@
 
 - **Batuhan Arslan**  
   GitHub: [engbatuhanarslan](https://github.com/engbatuhanarslan)
+  Role: Captain
 - **Tessa Talsma**  
   GitHub: [ttalsma](https://github.com/ttalsma)
+  Role: Navigator
 - **Adarsh Rastogi**  
   GitHub: [adarshrastogi67](https://github.com/adarshrastogi67)
+  Role: Challenger
 - **Aniket Barve**  
   GitHub: [Aniket-3005](https://github.com/Aniket-3005)
+  Role: Strategist
 - **Pascal Kneuper**  
   GitHub: [k411e](https://github.com/k411e)
+  Role: Explorer
 
 ---
 
