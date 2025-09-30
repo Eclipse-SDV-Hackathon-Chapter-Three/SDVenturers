@@ -1,26 +1,41 @@
-Team 4: SDVenturers
+# Team 4: SDVenturers
 
-Team members:
+## Team Members
 
-Batuhan Arslan - Github: engbatuhanarslan
-Tessa Talsma - Github: ttalsma
-Adarsh Rastogi - Github: adarshrastogi67
-Aniket Barve - Github: Aniket-3005
-Pascal Kneuper - Github: k411e
+- **Batuhan Arslan**  
+  GitHub: [engbatuhanarslan](https://github.com/engbatuhanarslan)
+- **Tessa Talsma**  
+  GitHub: [ttalsma](https://github.com/ttalsma)
+- **Adarsh Rastogi**  
+  GitHub: [adarshrastogi67](https://github.com/adarshrastogi67)
+- **Aniket Barve**  
+  GitHub: [Aniket-3005](https://github.com/Aniket-3005)
+- **Pascal Kneuper**  
+  GitHub: [k411e](https://github.com/k411e)
 
-Challenge:
-SDV Lab
+---
 
-Core idea: Mood detection and action
+## Challenge
 
-Driver mood detection, e.g. via bio signals such as heart rate, eye behavior.
-Limit/adjust car/ecu behavior accordingly, e.g. limit maximum acceleration.
+**SDV Lab**
 
+### Core Idea: Mood Detection and Action
 
-Developement process:
+- Driver mood detection (e.g., via bio signals such as heart rate, eye behavior)
+- Limit or adjust car/ECU behavior accordingly (e.g., limit maximum acceleration)
 
-- Figure out mood detection. Facial recognition. AI?
-- Data collection. Which sensors? Which signal? Algorithms?
-- Scope of car/ecu behavior changes and implementation
-- Testing via three simple scenarios (e.g. 3 face emotions)
-- Communication/sharing via slack/whiteboard. Decisions via voting.
+---
+
+## Development Process
+
+1. **Figure out mood detection:** Facial recognition, AI, etc.
+2. **Data collection:**  
+   - Which sensors?  
+   - Which signals?  
+   - Which algorithms?
+3. **Scope of car/ECU behavior changes and implementation**
+4. **Testing:**  
+   - Via three simple scenarios (e.g., 3 face emotions)
+5. **Communication/Sharing:**  
+   - Via Slack/whiteboard  
+   - Decisions made via voting
