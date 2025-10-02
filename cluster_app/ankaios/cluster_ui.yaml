@@ -1,0 +1,14 @@
+Cluster_UI:
+  runtime: podman
+  agent: agent_A
+  restartPolicy: NEVER
+  runtimeConfig: |
+    image: python:3.10
+    commandOptions:
+      - "python"
+      - "/app/cluster_ui.py"
+    volumeMounts:
+      - hostPath: ./cluster_ui.py
+        containerPath: /app/cluster_ui.py
+      - hostPath: ./cluster.png
+        containerPath: /app/cluster.png

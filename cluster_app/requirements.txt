@@ -1,0 +1,7 @@
+tk
+flask
+matplotlib
+pygame
+PyQt5
+paho-mqtt
+Pillow
