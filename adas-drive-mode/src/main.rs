@@ -48,6 +48,8 @@ type SharedData = Arc<Mutex<CollectedData>>;
 async fn main() -> Result<()> {
     // Initialize logger
     env_logger::init();
+    let mqtt_broker_host = std::env::var("MQTT_BROKER_HOST").unwrap_or_else(|_| "localhost".to_string());
+    let mqtt_broker_port = std::env::var("MQTT_BROKER_PORT").unwrap_or_else(|_| "1883".to_string());
     
     // Shared data store for collected information
     let shared_data: SharedData = Arc::new(Mutex::new(CollectedData {
@@ -59,7 +61,7 @@ async fn main() -> Result<()> {
     // uprotocol configuration
     // --- MQTT5 Transport Specific Stuff ---
     let mqtt_client_options = MqttClientOptions {
-        broker_uri: "192.168.24.254:1883".to_string(),
+        broker_uri: format!("{mqtt_broker_host}:{mqtt_broker_port}"),
         // broker_uri: "192.168.24.247:1883".to_string(),
         ..Default::default()
     };
@@ -77,7 +79,7 @@ async fn main() -> Result<()> {
     info!("Connected to uProtocol MQTT5 broker");
     
     // MQTT configuration
-    let mut mqttoptions = MqttOptions::new("mood-heartbeat-processor", "192.168.24.254", 1883);
+    let mut mqttoptions = MqttOptions::new("mood-heartbeat-processor", mqtt_broker_host, mqtt_broker_port.parse()?);
     mqttoptions.set_keep_alive(Duration::from_secs(5));
     
     let (client, mut eventloop) = AsyncClient::new(mqttoptions, 10);

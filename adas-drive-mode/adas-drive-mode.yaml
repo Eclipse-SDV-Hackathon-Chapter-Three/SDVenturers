@@ -1,0 +1,29 @@
+apiVersion: v0.1
+workloads:
+  mqtt_broker:
+    runtime: podman
+    agent: agent_A
+    restartPolicy: NEVER
+    configs:
+      mqtt_conf: mqtt_config
+    files:
+      - mountPoint: /mosquitto/config/mosquitto.conf
+        data: "{{mqtt_conf}}"
+    runtimeConfig: |
+      image: docker.io/library/eclipse-mosquitto:latest
+      commandOptions: ["--network", "host", "-u", "mosquitto", "-v", "mosquitto_data:/mosquitto/data"]
+  adas_drive_mode:
+    runtime: podman
+    agent: agent_A
+    dependencies:
+      mqtt_broker: ADD_COND_RUNNING
+    restartPolicy: NEVER
+    runtimeConfig: |
+      image: adas-drive-mode-app:0.1
+      commandOptions: ["-e", "RUST_LOG=debug", "--net=host", "-e", "MQTT_BROKER_HOST=localhost"]
+configs:
+  mqtt_config: |
+    allow_anonymous true
+    listener 1883 0.0.0.0
+    persistence true
+    persistence_location /mosquitto/data/
