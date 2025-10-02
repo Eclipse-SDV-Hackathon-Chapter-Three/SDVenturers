@@ -1,4 +1,18 @@
-# Team 4: SDVenturers
+# Team 4: SDVenturers: Mood Detection and Action
+
+Repository structure:
+
+- adas-drive-mode:
+    - Rust app for mood detection decision logic
+- face recognition:
+    - Python app using deepface for mood detection via camera
+- python-dashboard:
+    - Python dashboard app for visualizing mood detection and car behavior
+- sdv_lab:
+    - Fork of sdv_lab repo with:
+      - sdv_lab/android_treadx/threadx/threadx-app/cross/sdventurers_app:
+        - Rust thread app for AZ3166 mcu as a mock radar sensor detecting heart rate
+      - Android digital cluster dashboard app for visualizing mood detection and car behavior
 
 ## Team Members
 
