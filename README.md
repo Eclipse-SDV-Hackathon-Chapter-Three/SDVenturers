@@ -13,7 +13,7 @@ Repository structure:
 - sdv_lab:
     - Fork of sdv_lab repo with:
       - sdv_lab/android_treadx/threadx/threadx-app/cross/sdventurers_app:
-        - Rust thread app for AZ3166 mcu as a mock radar sensor detecting heart rate
+        - Rust threadx app for AZ3166 mcu as a mock radar sensor detecting heart rate
 
 ## Team Members
 
